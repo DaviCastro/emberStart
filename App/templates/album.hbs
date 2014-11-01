@@ -1,0 +1,10 @@
+
+<!-- e necessario criar no componente um atributo com o nome da acao do controller para ser possivel essa acao do compoente 
+chegar no controler 'panelActions' -->
+<div class="col-xs-6">
+	{{#panel-primary title="Album" bootStrapClass="panel panel-success" customId="album" arrayActions=arrayActions panelActions='panelActions'}}
+	 <span class="label label-default">Name: </span> {{name}} <span
+		class="label label-default">Description: </span> {{description}} {{/panel-primary}}
+</div>
+{{outlet}}
+

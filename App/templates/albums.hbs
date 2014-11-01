@@ -1,0 +1,19 @@
+<div class="col-xs-6">
+	{{#panel-primary customId="albuns" title="Albuns" arrayActions=arrayActions bootStrapClass="panel
+	panel-primary" panelActions='panelActions'}}
+	<ul class="list-group-item">
+		{{#each album in controller}}
+		<li class="list-group-item">{{#link-to 'album'
+			album}}{{album.id}} - {{album.name}} {{/link-to}}</li> {{/each}}
+	</ul>
+	<div class="panel-footer">
+		<span class="label label-primary"> Albuns: {{albumContador}}</span>
+	</div>
+	{{/panel-primary}}
+
+</div>
+
+
+{{outlet}}
+
+

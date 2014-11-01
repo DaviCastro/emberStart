@@ -1,0 +1,23 @@
+<div class="col-xs-6">
+	{{#panel-primary title='Album' 
+	customId='EditAlbum' panelActions='panelActions' arrayActions=arrayActions bootStrapClass='panel panel-success'}}
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label class="col-xs-4 control-label" for="name">Name</label>
+			<div class="col-xs-8">{{view App.MyText value=name
+				placeholder="Name" class='form-control' id="name" }}</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-4 control-label" for="description">description</label>
+
+			<div class="col-xs-8">{{view App.MyText placeholder="Description"
+				value=description class="form-control" id="description"}}</div>
+		</div>
+	</form>
+	
+	{{/panel-primary}}
+</div>
+
+
+
+

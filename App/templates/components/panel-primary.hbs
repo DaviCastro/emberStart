@@ -1,0 +1,51 @@
+<div {{bind-attr class=bootStrapClass}}>
+	<div class="panel-heading">
+
+		{{#if arrayActions}}
+		<div style="margin-top: -1.3%" class="btn-group pull-right">
+			<button type="button" class="btn btn-default dropdown-toggle"
+				data-toggle="dropdown">
+				Actions <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				{{#each arrayActions}}
+				<li><a href="#" {{action 'panelActions' this on='click'}}>{{name}}</a></li>
+				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+
+		<h3 data-toggle="collapse" data-parent="#accordion" {{bind-attr
+			href=hrefCollapseId}} {{action 'collapse' on='click'
+			}} class="panel-title">
+			<span {{bind-attr id=collapseId}}
+				class="glyphicon glyphicon-collapse-up">{{title}} 
+		</h3>
+	</div>
+	<div {{bind-attr id=customId}} class="panel-collapse collapse in">
+		<div class="panel-body">{{yield}}</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" {{bind-attr id=myModalId}} tabindex="-1"
+	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button {{action 'cancelDelete'}} type="button" class="close"
+					data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Album</h4>
+			</div>
+			<div class="modal-body">Are you shure?</div>
+			<div class="modal-footer">
+				<button type="button"
+					{{action 'cancelDelete'}} class="btn btn-default"
+					data-dismiss="modal">Cancel</button>
+				<button type="button"
+					{{action 'confirmDelete' this}} class="btn btn-primary">Confirm</button>
+			</div>
+		</div>
+	</div>
+</div>
