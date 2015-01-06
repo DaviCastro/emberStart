@@ -1,4 +1,8 @@
 emberStart
 ==========
 
-Projeto de estudos com ember
+* EMBER
+* BOOTSTRAP
+* GRUNTJS
+* BOWER
+* NPM
