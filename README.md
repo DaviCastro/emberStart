@@ -1,6 +1,6 @@
 emberStart
 ==========
-
+Studying ember.
 * EMBER
 * BOOTSTRAP
 * GRUNTJS
